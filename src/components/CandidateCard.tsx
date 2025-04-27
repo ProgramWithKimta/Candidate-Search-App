@@ -1,13 +1,12 @@
-import type React from 'react';
 import type Candidate from '../interfaces/Candidate.interface';
 
 type CandidateCardProps = {
-  currentUser: Candidate;
+  currentUser?: Candidate;
   removeFromStorage?: () => void;
   addToCandidateList?: () => void;
 };
 
-const CandidateCard = ({currentUser, removeFromStorage, addToCandidateList}: CandidateCardProps) => {
+const CandidateCard = ({currentUser}: CandidateCardProps) => {
   return (
     <>
       {currentUser?.name ? (
